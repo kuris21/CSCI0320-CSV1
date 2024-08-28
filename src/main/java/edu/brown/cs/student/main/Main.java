@@ -1,23 +1,17 @@
 package edu.brown.cs.student.main;
 
-/** The Main class of our project. This is where execution begins. */
+/**
+ * The Main class of our project. This is where execution begins. Note: For this first sprint, you
+ * will not be running the parser through main(), but rather interacting with the parser through
+ * extensive testing!
+ */
 public final class Main {
+
   /**
-   * The initial method called when execution begins.
+   * The main method is the entry point of the application.
    *
-   * @param args An array of command line arguments
+   * @param args command-line arguments passed to the program
    */
   public static void main(String[] args) {
-    new Main(args).run();
-  }
-
-  private Main(String[] args) {}
-
-  private void run() {
-    // dear student: you can remove this. you can remove anything. you're in cs32. you're free!
-    System.out.println(
-        "Your horoscope for this project:\n"
-            + "Entrust in the Strategy pattern, and it shall give thee the sovereignty to "
-            + "decide and the dexterity to change direction in the realm of thy code.");
   }
 }
