@@ -1,7 +1,8 @@
 package Searcher;
-import Parser.Parser;
+
 import CSV_Exceptions.CSVParserException;
 import ObjectCreators.TrivialCreator;
+import Parser.Parser;
 import java.io.FileNotFoundException;
 import java.io.FileReader;
 import java.io.IOException;
@@ -17,14 +18,17 @@ public class CSVSearcher {
   }
 
   /**
-   * Search the CSV for rows that contain the specified value in a given column or across all columns.
+   * Search the CSV for rows that contain the specified value in a given column or across all
+   * columns.
    *
-   * @param filename        The CSV file path.
-   * @param searchValue     The value to search for.
-   * @param columnIdentifier The column index (0-based) or column name to search within. If null, search all columns.
-   * @param hasHeader       Whether the CSV file contains a header row.
+   * @param filename The CSV file path.
+   * @param searchValue The value to search for.
+   * @param columnIdentifier The column index (0-based) or column name to search within. If null,
+   *     search all columns.
+   * @param hasHeader Whether the CSV file contains a header row.
    */
-  public void search(String filename, String searchValue, String columnIdentifier, boolean hasHeader) {
+  public void search(
+      String filename, String searchValue, String columnIdentifier, boolean hasHeader) {
     try {
       // Initialize the parser with the file
       FileReader reader = new FileReader(filename);
@@ -62,13 +66,15 @@ public class CSVSearcher {
   /**
    * Check if a row matches the search criteria.
    *
-   * @param row              The row to check.
-   * @param searchValue      The value to search for.
-   * @param columnIdentifier The column index (0-based) or column name to search within. If null, search all columns.
-   * @param headerRow        The header row, if applicable.
+   * @param row The row to check.
+   * @param searchValue The value to search for.
+   * @param columnIdentifier The column index (0-based) or column name to search within. If null,
+   *     search all columns.
+   * @param headerRow The header row, if applicable.
    * @return true if the row matches the search criteria, false otherwise.
    */
-  private boolean matchesRow(List<String> row, String searchValue, String columnIdentifier, List<String> headerRow) {
+  private boolean matchesRow(
+      List<String> row, String searchValue, String columnIdentifier, List<String> headerRow) {
     if (columnIdentifier == null) {
       // Search across all columns
       for (String cell : row) {
@@ -107,4 +113,3 @@ public class CSVSearcher {
     }
   }
 }
-

@@ -1,4 +1,5 @@
 package ObjectCreators;
+
 import java.util.List;
 
 public class TrivialCreator implements CreatorFromRow<List<String>> {
@@ -7,7 +8,7 @@ public class TrivialCreator implements CreatorFromRow<List<String>> {
     return row;
   }
 
-  public static int rowSize(List<String> row){
+  public static int rowSize(List<String> row) {
     return row.size();
   }
 }

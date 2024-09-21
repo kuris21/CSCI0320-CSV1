@@ -7,7 +7,6 @@ public class Star {
   private double y;
   private double z;
 
-
   public Star(int starID, String Name, double x, double y, double z) {
     this.starID = starID;
     this.Name = Name;
@@ -39,13 +38,18 @@ public class Star {
 
   @Override
   public String toString() {
-    return "Star{" +
-        "starID=" + starID +
-        ", properName='" + Name + '\'' +
-        ", x=" + x +
-        ", y=" + y +
-        ", z=" + z +
-        '}';
+    return "Star{"
+        + "starID="
+        + starID
+        + ", properName='"
+        + Name
+        + '\''
+        + ", x="
+        + x
+        + ", y="
+        + y
+        + ", z="
+        + z
+        + '}';
   }
 }
-
